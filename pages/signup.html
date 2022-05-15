@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="./css/signup.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <script defer src="./js/signup.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <h1>Sign Up</h1>
+        <div class="input">
+          <label for="email">Email</label>
+          <input id="email" autocomplete="off" type="email" placeholder="Enter your email." />
+        </div>
+        <div class="input">
+          <label for="userName">Username</label>
+          <input id="userName" type="text" placeholder="Enter your username." />
+          <!-- <p class="error">Please make sure your password match.</p> -->
+        </div>
+        <div class="input">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Enter your full name." />
+        </div>
+        <div class="input">
+          <label for="password">Password</label>
+          <input id="password" class="password" type="password" placeholder="Enter your password." />
+        </div>
+        <div class="input">
+          <label for="confirmPassword">Confirm Password</label>
+          <input id="confirmPassword" class="password" type="password" placeholder="Confirm your password" />
+        </div>
+        <div class="agree">
+          <input id="agree" type="checkbox" />
+          <label for="agree">I agree to all statements include in <span>Terms Of US</span></label>
+        </div>
+        <div class="input">
+          <button class="submit">Create Account</button>
+        </div>
+        <p>Have an account? <a class="link" href="/login">Login</a></p>
+        <div class="login-with">
+          <h3>Or Register With</h3>
+          <div class="social-box">
+            <button class="facebook"><i class="fa-brands fa-facebook-f"></i></button>
+            <button class="google"><i class="fa-brands fa-google-plus-g"></i></button>
+            <button class="twitter"><i class="fa-brands fa-twitter"></i></button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

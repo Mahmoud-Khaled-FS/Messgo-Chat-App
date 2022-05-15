@@ -1,0 +1,93 @@
+.pop {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pop .content {
+  background-color: #19191b;
+  width: 500px;
+  height: 500px;
+  padding: 20px 30px;
+}
+.pop .header {
+  width: 100%;
+  margin-bottom: 45px;
+}
+.pop .search {
+  display: inline-block;
+  padding: 20px 0;
+  position: relative;
+  /* border: none; */
+  width: 65%;
+  margin-left: 30px;
+  border-radius: 25px;
+}
+.pop .search input {
+  border: 1px solid #ccc;
+  background-color: #19191b;
+  color: white;
+  height: 30px;
+  width: 100%;
+  /* margin-left: 20px; */
+  padding: 10px 20px 10px 45px;
+  border-radius: 25px;
+}
+.pop .search input:focus {
+  outline: none;
+}
+.pop .search i {
+  color: var(--text-color);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+.pop button {
+  background-color: #2c2c30;
+  border-radius: 10px;
+  height: 30px;
+  color: white;
+  padding: 5px 10px;
+}
+.pop .search-content {
+  padding: 10px 20px;
+}
+.pop .search-content .user {
+  /* padding: 10px; */
+  position: relative;
+  height: 80px;
+  background-color: #171719;
+  overflow: hidden;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+  /* position: relative; */
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 5px;
+}
+.pop .search-content h4 {
+  color: white;
+}
+.pop .search-content .image {
+  height: 50px;
+  width: 50px;
+  margin-right: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 15px;
+}
+.pop .search-content .image img {
+  /* height: 60px;
+  width: 60px; */
+  max-height: 100%;
+  max-width: 100%;
+  /* aspect-ratio: 1; */
+}

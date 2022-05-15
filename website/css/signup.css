@@ -1,0 +1,186 @@
+:root {
+  --text-color: #7a7a7a;
+  font-family: sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+button {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+main {
+  background-image: url('./../assets/background/any_minute_now_by_aenami_daht6vs.png');
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main::after {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  content: '';
+  background-color: #000;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+}
+.box {
+  z-index: 99;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 30px 40px;
+  /* height: 620px; */
+  /* height: fit-content; */
+}
+
+.box h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 30px;
+}
+.box .input {
+  margin: 15px auto;
+}
+.box .input label {
+  display: block;
+  margin-bottom: 5px;
+}
+.box .input p {
+  text-align: left;
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.box .agree input {
+  display: inline-block;
+  width: fit-content;
+  margin-right: 10px;
+}
+.box .agree label {
+  display: inline-block;
+  font-size: 14px;
+}
+.box .agree label span {
+  color: #3746ca;
+  cursor: pointer;
+}
+.box input {
+  display: block;
+  width: 300px;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+}
+
+.box input.password {
+  margin-bottom: 10px;
+}
+.box input.error {
+  border: 1px solid red;
+}
+.box input:focus,
+.box input:active,
+.box button:focus,
+.box button:active {
+  outline: none;
+}
+.box a.forget {
+  color: #4f62ff;
+  text-decoration: none;
+  text-align: right;
+  display: block;
+  font-size: 12px;
+  transition: 0.3s;
+}
+.box .submit {
+  background: #4f62ff;
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 200px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+.box .submit:active {
+  background: #3746ca;
+}
+.box .submit:hover {
+  background: #3746ca;
+}
+.box p {
+  font-size: 14px;
+  text-align: center;
+}
+.box p a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  color: #4f62ff;
+  transition: 0.3s;
+}
+.box a.link:hover {
+  text-decoration: underline;
+  color: #6a76e0;
+}
+
+.login-with {
+  border-top: 1px solid #7a7a7a49;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+.login-with h3 {
+  margin-bottom: 15px;
+}
+.social-box button {
+  border: none;
+  margin-right: 10px;
+  font-size: 20px;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+.social-box button.facebook {
+  background-color: #3b5998;
+}
+.social-box button.facebook:hover {
+  background-color: #274381;
+}
+.social-box button.twitter {
+  background-color: #1da1f2;
+}
+.social-box button.twitter:hover {
+  background-color: #1a89ce;
+}
+.social-box button.google {
+  background-color: #db4437;
+}
+.social-box button.google:hover {
+  background-color: #b92e22;
+}
+
+.submit:disabled {
+  background-color: #7a7a7a;
+}
+.submit:disabled:hover {
+  background-color: #7a7a7a;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messgo</title>
+    <link rel="stylesheet" href="css/loading.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/mediabox.css" />
+    <link rel="stylesheet" href="css/pop.css" />
+    <script src="js/messages.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script defer src="js/app.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/load.js"></script>
+</head>
+
+<body>
+  <div class="loading">
+    <div class="box">
+      <div class="L">L</div>
+      <div class="O">O</div>
+      <div class="A">A</div>
+      <div class="D">D</div>
+      <div class="I">I</div>
+      <div class="N">N</div>
+      <div class="G">G</div>
+      <div class="underline"></div>
+    </div>
+  </div>
+  <main>
+    <header>
+      <div class="logo">
+        <img src="./assets/Logo.png" alt="Messgo" />
+      </div>
+      <nav>
+        <ul>
+          <li class="active">
+            <button id="chats-button"><i class="fa-solid fa-message"></i></button>
+          </li>
+          <li>
+            <button><i class="fa-solid fa-user-group"></i></button>
+          </li>
+          <li>
+            <button id="friends-button"><i class="fa-regular fa-address-book"></i></button>
+          </li>
+          <li>
+            <button><i class="fa-solid fa-user"></i></button>
+          </li>
+        </ul>
+        <div class="setting">
+          <button><i class="fa-solid fa-gear"></i></button>
+        </div>
+      </nav>
+    </header>
+    <aside>
+      <div class="search">
+        <input type="text" placeholder="Search" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="content">
+        <div class="header">
+          <h3>Recent Chats</h3>
+          <button>+ New Chat</button>
+        </div>
+        <div id="side-banal-container">
+        </div>
+        <!-- <div class="contact chat-active">
+            <div class="image">
+              <img src="./assets/profile/profile1.jpg" alt="profile" />
+            </div>
+            <div class="message-info">
+              <h4>Angue Tampa</h4>
+              <p class="message">Hello</p>
+              <span class="date">2:20 AM</span>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="image">
+              <img src="./assets/profile/profile2.jpg" alt="profile" />
+            </div>
+            <div class="message-info">
+              <h4>Angue Tampa</h4>
+              <p class="message">askjdhasjk dhjkashdjkas hjkdhsajklh dsjklah a</p>
+              <span class="date">2:20 AM</span>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="image">
+              <img src="./assets/profile/profile3.jpg" alt="profile" />
+            </div>
+            <div class="message-info">
+              <h4>Angue Tampa</h4>
+              <p class="message">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic error unde est natus. Sint maxime
+                nostrum placeat dolorem perferendis fuga ea pariatur facilis, ullam temporibus. Cupiditate sint nulla
+                neque voluptatibus.
+              </p>
+              <span class="date">2:20 AM</span>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="image">
+              <img src="./assets/profile/profile4.jpg" alt="profile" />
+            </div>
+            <div class="message-info">
+              <h4>Angue Tampa</h4>
+              <p class="message">
+                ;Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum pariatur dolorem, nobis vel esse
+                repellat corrupti minima enim, mollitia alias voluptatem id deserunt! Quasi obcaecati molestias
+                deleniti blanditiis necessitatibus nemo!
+              </p>
+              <span class="date">2:20 AM</span>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="image">
+              <img src="./assets/profile/profile5.jpg" alt="profile" />
+            </div>
+            <div class="message-info">
+              <h4>Angue Tampa</h4>
+              <p class="message">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti aperiam quaerat. Facere
+                architecto laborum sed neque labore veniam vitae, aliquam blanditiis nisi, quia facilis at officiis
+                totam quo deleniti.
+              </p>
+              <span class="date">2:20 AM</span>
+            </div>
+          </div> -->
+      </div>
+      </div>
+    </aside>
+    <section id="chatContainer">
+      <div class="no-chat">
+        <h2>Select The Chat.</h2>
+      </div>
+      <!-- <div class="chat">
+        <div class="header">
+          <div class="image">
+            <img src="./assets/profile/profile1.jpg" alt="profile" />
+          </div>
+          <div class="chat-info">
+            <h4>Angue Tampa</h4>
+            <span class="date">Last Seen 3 hours ago</span>
+          </div>
+          <div class="controlle">
+            <button><i class="fa-solid fa-phone"></i></button>
+            <button><i class="fa-solid fa-video"></i></button>
+            <button><i class="fa-solid fa-ellipsis"></i></button>
+          </div>
+        </div>
+        <div class="content">
+          <div class="chat-container" id="chat"></div>
+        </div>
+        <footer>
+          <div class="input">
+            <button><i class="fa-solid fa-paperclip"></i></button>
+            <button><i class="fa-solid fa-face-grin"></i></button>
+            <input id="messageInput" type="text" placeholder="Type a message here..." />
+          </div>
+          <div class="send">
+            <button hidden id="sendButton"><i class="fa-solid fa-paper-plane"></i></button>
+            <button id="recordButton"><i class="fa-solid fa-microphone"></i></i></button>
+          </div>
+        </footer>
+      </div> -->
+    </section>
+  </main>
+  <!-- <script type="module">
+    // console.log(user.id)
+    import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
+    const socket = io();
+    socket.on('message', (data) => {
+      Messages.createMessagesChat([data.message], Chat.activeChat.chat, true)
+      
+    }); -->
+  </script>
+</body>
+
+</html>
